@@ -1,0 +1,1 @@
+{"name":"LelManga","description":"Extension that pulls content from lelmanga.com.","version":"1.0.0-alpha.6","icon":"icon.png","language":"fr","contentRating":"SAFE","capabilities":[1,16,4,64,32],"badges":[],"developers":[{"name":"nyzzik","github":"https://github.com/nyzzik"}],"id":"LelManga"}

@@ -1,0 +1,1 @@
+{"name":"Thunderscans","description":"Extension that pulls content from en-thunderscans.com.","version":"1.0.0-alpha.11","icon":"icon.png","language":"en","contentRating":"SAFE","capabilities":[1,16,4,64,32],"badges":[],"developers":[{"name":"nyzzik","github":"https://github.com/nyzzik"}],"id":"Thunderscans"}
