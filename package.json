@@ -31,7 +31,7 @@
     "@paperback/types": "1.0.0-alpha.92",
     "cheerio": "^1.2.0",
     "fastest-levenshtein": "^1.0.16",
-    "oxfmt": "^0.73.0",
+    "oxfmt": "^0.75.0",
     "oxlint": "^1.88.0",
     "oxlint-tsgolint": "^7.0.2004",
     "stemmer": "^2.0.1",
