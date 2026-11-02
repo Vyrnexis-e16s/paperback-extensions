@@ -1,0 +1,23 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Copyright © 2026 Inkdex */
+
+import { MadaraGeneric } from "../_themes/madara/main";
+import { Manga3asqParser } from "./parsers";
+import pbconfig from "./pbconfig";
+
+const DOMAIN: string = "https://3asq.pro";
+
+class Manga3asqExtension extends MadaraGeneric {
+  constructor() {
+    super({
+      domain: DOMAIN,
+      name: pbconfig.name,
+      contentRating: pbconfig.contentRating,
+      language: pbconfig.language,
+      usePostIds: true,
+      parser: new Manga3asqParser(),
+    });
+  }
+}
+
+export const Manga3asq = new Manga3asqExtension();

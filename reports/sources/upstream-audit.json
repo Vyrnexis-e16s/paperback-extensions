@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-11-02",
+  "repositories": [
+    {
+      "id": "inkdex-general",
+      "origin": "https://github.com/inkdex/general-extensions",
+      "localPath": "_upstream/general-extensions",
+      "headSha": "97bc477134e489804652e619933c5d6f1903744c",
+      "license": "GPL-3.0-or-later",
+      "inspectionDate": "2026-11-02",
+      "kind": "source-code"
+    },
+    {
+      "id": "inkdex-madara",
+      "origin": "https://github.com/inkdex/madara-extensions",
+      "localPath": "_upstream/madara-extensions",
+      "headSha": "3b123d33ee4fba9c53d752caae5bee6953b18f7b",
+      "license": "GPL-3.0-or-later",
+      "inspectionDate": "2026-11-02",
+      "kind": "source-code"
+    },
+    {
+      "id": "inkdex-mangastream",
+      "origin": "https://github.com/inkdex/mangastream-extensions",
+      "localPath": "_upstream/mangastream-extensions",
+      "headSha": "056b68fbf0a465eca24b6a71e8ba0de290f34f48",
+      "license": "GPL-3.0-or-later",
+      "inspectionDate": "2026-11-02",
+      "kind": "source-code"
+    },
+    {
+      "id": "inkdex-mangabox",
+      "origin": "https://github.com/inkdex/mangabox-extensions",
+      "localPath": "_upstream/mangabox-extensions",
+      "headSha": "cdfd2518f9f5b0497f445ac99ee32fa6c515475f",
+      "license": "GPL-3.0-or-later",
+      "inspectionDate": "2026-11-02",
+      "kind": "source-code"
+    },
+    {
+      "id": "inkdex-mangaworld",
+      "origin": "https://github.com/inkdex/mangaworld-extensions",
+      "localPath": "_upstream/mangaworld-extensions",
+      "headSha": "d83d9890bac3baf43dbcaa10f9ab6d14446c2795",
+      "license": "GPL-3.0-or-later",
+      "inspectionDate": "2026-11-02",
+      "kind": "source-code"
+    },
+    {
+      "id": "inkdex-liliana",
+      "origin": "https://github.com/inkdex/liliana-extensions",
+      "localPath": "_upstream/liliana-extensions",
+      "headSha": "06e6ec6e3de8d68d9521a90361bfab74b33db6b7",
+      "license": "GPL-3.0-or-later",
+      "inspectionDate": "2026-11-02",
+      "kind": "source-code"
+    },
+    {
+      "id": "netsky-0.9",
+      "origin": "https://github.com/TheNetsky/netskys-extensions",
+      "localPath": "_upstream/netskys-extensions",
+      "headSha": "4a370e1c91681d10fce8f53d52308e0d88c33486",
+      "license": "MIT",
+      "inspectionDate": "2026-11-02",
+      "kind": "source-code"
+    },
+    {
+      "id": "paperbackext",
+      "origin": "https://github.com/Nicartjay/PaperbackExt",
+      "localPath": "_upstream/PaperbackExt",
+      "headSha": "a6ef7b8f4f96b37327ab27429fdea7f9e5d8a658",
+      "license": "MIT",
+      "inspectionDate": "2026-11-02",
+      "kind": "source-code"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Copyright © 2026 Inkdex */
+
+import { Mangabox } from "../_themes/mangabox/main";
+import pbconfig from "./pbconfig";
+
+const DOMAIN: string = "https://www.manganato.gg";
+
+class MangaNatoExtension extends Mangabox {
+  constructor() {
+    super({
+      domain: DOMAIN,
+      name: pbconfig.name,
+      contentRating: pbconfig.contentRating,
+      language: pbconfig.language,
+      bypassPage: `${DOMAIN}/search/story`,
+    });
+  }
+}
+
+export const MangaNato = new MangaNatoExtension();

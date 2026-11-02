@@ -1,0 +1,40 @@
+{
+  "name": "Paperback Extensions (0.9)",
+  "repositoryName": "Paperback Extensions (0.9)",
+  "repositoryDescription": "Manga, manhwa, manhua, webtoon, novel, and classified 18+ sources for Paperback 0.9.",
+  "description": "Manga, manhwa, manhua, webtoon, novel, and classified 18+ sources for Paperback 0.9.",
+  "private": true,
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "lint": "oxlint --type-aware src/common src/migration scripts",
+    "lint:check": "oxlint --type-aware --deny-warnings src/common src/migration scripts",
+    "format": "oxfmt src/common src/migration scripts tests docs",
+    "format:check": "oxfmt --check src/common src/migration scripts tests docs",
+    "conformance": "npm run tsc && npm run lint:check && npm run format:check && npm run validate",
+    "bundle": "paperback-cli bundle",
+    "serve": "paperback-cli serve",
+    "dev": "paperback-cli serve --watch",
+    "logcat": "paperback-cli logcat",
+    "test": "node --experimental-strip-types --test tests/unit/cookies.test.mjs tests/unit/webtoon.test.mjs tests/unit/migration.test.mjs tests/unit/errors.test.mjs",
+    "test:extensions": "paperback-cli test --noConsole --output ./bundles/tests.json",
+    "validate": "node scripts/validate_registry.mjs",
+    "health": "node scripts/source_health.mjs",
+    "assemble": "python scripts/assemble_from_upstream.py"
+  },
+  "devDependencies": {
+    "@paperback/toolchain": "1.0.0-alpha.92",
+    "@paperback/types": "1.0.0-alpha.92",
+    "cheerio": "^1.2.0",
+    "fastest-levenshtein": "^1.0.16",
+    "oxfmt": "^0.73.0",
+    "oxlint": "^1.88.0",
+    "oxlint-tsgolint": "^7.0.2004",
+    "stemmer": "^2.0.1",
+    "typescript": "^5.9.3"
+  }
+}

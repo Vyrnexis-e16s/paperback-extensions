@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-11-02",
+  "toolchain": "1.0.0-alpha.92",
+  "appPrimary": "0.9 (209)",
+  "appRegression": "0.9 (208)",
+  "summary": {
+    "inventoried": 417,
+    "compiled": 417,
+    "unitTestsPassed": 9,
+    "idValidation": "417 unique source ids",
+    "typecheck": "passed",
+    "liveReachabilitySample": 6,
+    "liveReachabilityFailed": 0,
+    "deviceVerified": 0
+  },
+  "liveSample": [
+    { "extensionId": "AllManga", "websiteUrl": "https://mkissa.to", "ok": true },
+    { "extensionId": "Atsumaru", "websiteUrl": "https://atsu.moe", "ok": true },
+    { "extensionId": "FlameComics", "websiteUrl": "https://flamecomics.xyz", "ok": true },
+    { "extensionId": "HiveToons", "websiteUrl": "https://hivetoons.org", "ok": true },
+    { "extensionId": "LNori", "websiteUrl": "https://lnori.com", "ok": true },
+    { "extensionId": "MangaDemon", "websiteUrl": "https://demonicscans.org", "ok": true }
+  ],
+  "notes": [
+    "Compilation used paperback-cli bundle on Node v22.23.1; toolchain engines field asks for >=24.",
+    "Live sample is website GET reachability only, not search/metadata/chapter/page tests.",
+    "Device tests on TestFlight 0.9 (209) are pending. Follow docs/device-verification.md.",
+    "Do not treat compiled as verified working."
+  ]
+}

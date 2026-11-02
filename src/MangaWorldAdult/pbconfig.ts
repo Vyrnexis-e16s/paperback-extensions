@@ -1,0 +1,14 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Copyright © 2026 Inkdex */
+
+import { ContentRating } from "@paperback/types";
+
+import { basePbConfig } from "../_themes/mangaworld/config";
+
+const pbConfig = basePbConfig;
+
+pbConfig.name = "MangaWorldAdult";
+pbConfig.description = "Extension that pulls content from www.mangaworldadult.net.";
+pbConfig.contentRating = ContentRating.ADULT;
+
+export default pbConfig;

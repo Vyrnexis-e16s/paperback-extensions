@@ -1,0 +1,15 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Copyright © 2026 Inkdex */
+
+import { ContentRating } from "@paperback/types";
+
+import { basePbConfig, customVersion } from "../_themes/madara/config";
+
+let pbConfig = basePbConfig;
+
+pbConfig.name = "Toonily";
+pbConfig.description = "Extension that pulls content from toonily.com.";
+pbConfig.version = customVersion({ increasePrerelease: 1 });
+pbConfig.contentRating = ContentRating.ADULT;
+
+export default pbConfig;

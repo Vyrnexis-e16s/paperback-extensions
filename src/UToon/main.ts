@@ -1,0 +1,77 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Copyright © 2026 Inkdex */
+
+/* Adapted from Nicartjay's reference source:
+ * https://github.com/Nicartjay/PaperbackExt/blob/0.9/stable/src/Utoon/main.ts */
+
+import {
+  type DiscoverSection,
+  type DiscoverSectionItem,
+  type PagedResults,
+} from "@paperback/types";
+import * as cheerio from "cheerio";
+
+import { MadaraGeneric } from "../_themes/madara/main";
+import { UToonParser } from "./parsers";
+import pbconfig from "./pbconfig";
+
+const DOMAIN: string = "https://utoon.net";
+
+// utoon.net runs the custom "UTOON-ZAX" theme: the standard Madara request flow is intact,
+// so only the markup parsing (UToonParser) and the discover `?orderby=` sort params differ.
+class UToonExtension extends MadaraGeneric {
+  constructor() {
+    super({
+      domain: DOMAIN,
+      name: pbconfig.name,
+      contentRating: pbconfig.contentRating,
+      language: pbconfig.language,
+      usePostIds: false,
+      searchMangaSelector: "a.acard",
+      chapterEndpoint: 3,
+      directoryPath: "manga",
+      parser: new UToonParser(),
+    });
+  }
+
+  override async getDiscoverSectionItems(
+    section: DiscoverSection,
+    metadata: { page?: number } | undefined,
+  ): Promise<PagedResults<DiscoverSectionItem>> {
+    let param = "";
+    const page = metadata?.page ?? 1;
+
+    // The theme sorts via `?orderby=` (not Madara's `m_orderby`); trending reuses popular.
+    switch (section.id) {
+      case "new_series":
+        param = "?orderby=new";
+        break;
+      case "recently_updated":
+        param = ""; // No param = the default "recently updated" listing.
+        break;
+      case "currently_trending":
+      case "most_popular":
+        param = "?orderby=popular";
+        break;
+
+      default:
+        throw new Error("Invalid sectionId provided!");
+    }
+
+    const [_response, buffer] = await Application.scheduleRequest({
+      url: `${this.domain}/temp_dirpath/page/${page}/${param}`,
+      method: "GET",
+    });
+
+    const $ = cheerio.load(Application.arrayBufferToUTF8String(buffer));
+
+    const items = await this.parser.parseDiscoverSections($, section, this);
+
+    return {
+      items,
+      metadata: items.length > 0 ? { page: page + 1 } : undefined,
+    };
+  }
+}
+
+export const UToon = new UToonExtension();

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-02",
+  "policy": "Preserve upstream folder names as Paperback source IDs. Rename only on true website collision inside this unified registry.",
+  "entries": [
+    {
+      "previousExtensionId": "ManhuaPlus",
+      "currentExtensionId": "ManhuaPlus_liliana",
+      "previousSourceDomain": "https://manhuaplus.org",
+      "currentCanonicalDomain": "https://manhuaplus.org",
+      "reason": "id-collision-different-website",
+      "mappingConfidence": "high",
+      "evidence": "ManhuaPlus already used by https://github.com/inkdex/madara-extensions for https://manhuaplus.com"
+    }
+  ]
+}

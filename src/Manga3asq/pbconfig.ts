@@ -1,0 +1,12 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+/* Copyright © 2026 Inkdex */
+
+import { basePbConfig } from "../_themes/madara/config";
+
+let pbConfig = basePbConfig;
+
+pbConfig.name = "Manga3asq";
+pbConfig.description = "Extension that pulls content from 3asq.pro.";
+pbConfig.language = "ar";
+
+export default pbConfig;
