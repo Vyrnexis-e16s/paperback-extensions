@@ -14,7 +14,7 @@ Paperback **0.9 (209)** or **0.9 (208)** is required. 0.8 App Store builds canno
 On the iPhone/iPad that has Paperback 0.9, open:
 
 ```
-https://0xM44k.github.io/paperback-extensions/0.9/stable/
+https://Vyrnexis-e16s.github.io/paperback-extensions/0.9/stable/
 ```
 
 Tap **Add Repository to Paperback**, then confirm. The page lists every source. Mature / 18+ sources use `ContentRating.MATURE` or `ADULT` and follow the app's adult filter.
@@ -26,7 +26,7 @@ Do not use the Inkdex URL as this project's URL.
 1. Open Paperback 0.9.
 2. Settings → Extensions → +.
 3. Choose Source Repository.
-4. Paste `https://0xM44k.github.io/paperback-extensions/0.9/stable`.
+4. Paste `https://Vyrnexis-e16s.github.io/paperback-extensions/0.9/stable`.
 5. Install the sources you want.
 
 ## Local testing (same as other 0.9 repos)
@@ -41,4 +41,4 @@ npm run serve
 
 Open the printed URL on the device (or the computer, then tap **Add Repository to Paperback**). That uses the official 0.9 homepage and the `paperback://addRepo` deep link.
 
-Development channel, when deployed: `https://0xM44k.github.io/paperback-extensions/0.9/dev`.
+Development channel, when deployed: `https://Vyrnexis-e16s.github.io/paperback-extensions/0.9/dev`.

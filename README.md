@@ -6,10 +6,10 @@ The intended client is TestFlight **0.9 (209)**. **0.9 (208)** remains a regress
 
 ## Installation
 
-Once GitHub Pages is publishing this repository, open the following URL on the device and choose **Add Repository to Paperback**:
+Open the following URL on a device running Paperback 0.9 and choose **Add Repository to Paperback**:
 
 ```
-https://0xM44k.github.io/paperback-extensions/0.9/stable/
+https://Vyrnexis-e16s.github.io/paperback-extensions/0.9/stable/
 ```
 
 That path is the registry root: it must contain `versioning.json` and `index.html`. A `github.com/...` source URL will not be accepted by the app.
