@@ -1,0 +1,636 @@
+{
+  "live": {
+    "versioningStatus": 200,
+    "versioningContentType": "application/json; charset=utf-8",
+    "versioningBytes": 262063,
+    "strictJson": true,
+    "sourceCount": 417,
+    "repository": {
+      "name": "Paperback Extensions (0.9)",
+      "description": "Manga, manhwa, manhua, webtoon, novel, and classified 18+ sources for Paperback 0.9."
+    },
+    "builtWith": {
+      "toolchain": "1.0.0-alpha.92",
+      "types": "1.0.0-alpha.92"
+    },
+    "buildTime": "2026-11-02T22:00:53.552Z",
+    "indexStatus": 200,
+    "indexLooksOfficial": true,
+    "addRepoSnippet": true,
+    "hasAlpineInit": true,
+    "APComics/index.js": {
+      "status": 200,
+      "bytes": 321582,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    "APComics/info.json": {
+      "status": 200,
+      "bytes": 436,
+      "contentType": "application/json; charset=utf-8",
+      "strictJson": true
+    },
+    "APComics/static/icon.png": {
+      "status": 200,
+      "bytes": 16262,
+      "contentType": "image/png"
+    }
+  },
+  "inkdex": {
+    "https://inkdex.github.io/extensions/0.9/stable/versioning.json": {
+      "status": 200,
+      "bytes": 36193
+    },
+    "used": "https://inkdex.github.io/extensions/0.9/stable/versioning.json",
+    "keys": [
+      "buildTime",
+      "builtWith",
+      "repository",
+      "sources"
+    ],
+    "repositoryKeys": [
+      "description",
+      "name"
+    ],
+    "sourceCount": 68,
+    "sampleSourceKeys": [
+      "badges",
+      "capabilities",
+      "contentRating",
+      "description",
+      "developers",
+      "icon",
+      "id",
+      "language",
+      "name",
+      "version"
+    ],
+    "sampleRating": "MATURE",
+    "sampleCapabilitiesType": "list"
+  },
+  "schemaIssues": [],
+  "hosts": {},
+  "extract": {
+    "sourceCount": 417,
+    "hostsChecked": 401,
+    "noExplicitUrl": [
+      "AllPornComic",
+      "ArthurScan",
+      "Atsumaru",
+      "CoffeeManga",
+      "DragonTea",
+      "DrakeScans",
+      "GourmetScans",
+      "Hentai20",
+      "HiperDex",
+      "KunManga",
+      "LekManga",
+      "LelManga",
+      "LHTranslation",
+      "LilyManga",
+      "MadaraDex",
+      "Manga3asq",
+      "MangaBat",
+      "MangaDex",
+      "MangaDistrict",
+      "MangaKakalot",
+      "MangaNato",
+      "MangaNelo",
+      "MangaOrigines",
+      "MangaReadOrg",
+      "MangaScantrad",
+      "MangaTaro",
+      "MangaWorld",
+      "MangaWorldAdult",
+      "MangaZin",
+      "ManhuaPlus",
+      "Manhuaus",
+      "ManhwaClub",
+      "ManhwaRaw",
+      "ManhwaTop",
+      "ManhwaX",
+      "QiScans",
+      "RageScans",
+      "SamuraiScan",
+      "SetsuScans",
+      "ToonGod",
+      "Toonily",
+      "UToon",
+      "WebtoonXYZ",
+      "YaoiScan"
+    ],
+    "invalidUrls": []
+  },
+  "dns": {
+    "ok": 355,
+    "failSystem": 46,
+    "trueNxdomainOrDead": [
+      {
+        "host": "9hentai.so",
+        "sources": [
+          "NineHentai"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "akaicomic.org",
+        "sources": [
+          "AkaiComic"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11002] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "NXDOMAIN",
+        "nxdomain": true
+      },
+      {
+        "host": "anisascans.in",
+        "sources": [
+          "AnisaScans"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "api.punkrecordz.com",
+        "sources": [
+          "PunkRecords"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "NXDOMAIN",
+        "nxdomain": true
+      },
+      {
+        "host": "api.renascans.net",
+        "sources": [
+          "Renascans"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "NXDOMAIN",
+        "nxdomain": true
+      },
+      {
+        "host": "asiatoon.net",
+        "sources": [
+          "AsiaToon"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "cocomic.co",
+        "sources": [
+          "Cocomic"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "comics.8muses.com",
+        "sources": [
+          "Src8Muses"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "cutiecomics.com",
+        "sources": [
+          "CutieComics"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "dflow.alwaysdata.net",
+        "sources": [
+          "DflowScans"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "NXDOMAIN",
+        "nxdomain": true
+      },
+      {
+        "host": "doujindistrict.com",
+        "sources": [
+          "HM2D"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "gedecomix.com",
+        "sources": [
+          "GEDEComix"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "hentai3z.cc",
+        "sources": [
+          "Hentai3zCC"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "hentairead.com",
+        "sources": [
+          "HentaiRead"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "incase.buttsmithy.com",
+        "sources": [
+          "Buttsmithy"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "manga18.club",
+        "sources": [
+          "Manga18Club"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "manga18fx.com",
+        "sources": [
+          "Manga18fx"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "manga18x.net",
+        "sources": [
+          "Manga18x"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "mangaforfree.com",
+        "sources": [
+          "MangaforfreeCom"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "mangafree.info",
+        "sources": [
+          "Mangafree"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "mangagg.com",
+        "sources": [
+          "MangaGG"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "mangahub.io",
+        "sources": [
+          "MangaHub"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "manhuahot.com",
+        "sources": [
+          "ManhuaHot"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "manhwahub.net",
+        "sources": [
+          "ManhwaHub"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "manhwalike.com",
+        "sources": [
+          "Manhwalike"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "manhwaread.com",
+        "sources": [
+          "ManhwaRead"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "milftoon.xxx",
+        "sources": [
+          "Milftoon"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "mitaku.net",
+        "sources": [
+          "Mitaku"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "multporn.net",
+        "sources": [
+          "Multporn"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "qq.alandal.com",
+        "sources": [
+          "Alandal"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "NXDOMAIN",
+        "nxdomain": true
+      },
+      {
+        "host": "rcostation.xyz",
+        "sources": [
+          "ReadComicOnline"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11002] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "NXDOMAIN",
+        "nxdomain": true
+      },
+      {
+        "host": "read.oppai.stream",
+        "sources": [
+          "OppaiStream"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "NXDOMAIN",
+        "nxdomain": true
+      },
+      {
+        "host": "reader.decadencescans.com",
+        "sources": [
+          "DecadenceScans"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "saymanhwa.com",
+        "sources": [
+          "NewManhwa"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "NXDOMAIN",
+        "nxdomain": true
+      },
+      {
+        "host": "toonhey.com",
+        "sources": [
+          "HeyToon"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "toonizy.com",
+        "sources": [
+          "Toonizy"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "toontop.io",
+        "sources": [
+          "ToonilyMe"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "ww10.readblackclover.com",
+        "sources": [
+          "ReadBlackCloverMangaOnline"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "NXDOMAIN",
+        "nxdomain": true
+      },
+      {
+        "host": "www.blastwave-comic.com",
+        "sources": [
+          "GoneWithTheBlastwave"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "NXDOMAIN",
+        "nxdomain": true
+      },
+      {
+        "host": "www.mangago.me",
+        "sources": [
+          "Mangago"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "www.manhwaden.com",
+        "sources": [
+          "ManhwaDen"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "www.ohjoysextoy.com",
+        "sources": [
+          "OhJoySexToy"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "www.orchisasia.org",
+        "sources": [
+          "Orchisasia"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "www.paritehaber.com",
+        "sources": [
+          "Paritehaber"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "xlecx.one",
+        "sources": [
+          "XlecX"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      },
+      {
+        "host": "xyzcomics.com",
+        "sources": [
+          "XYZComics"
+        ],
+        "systemDns": false,
+        "systemError": "[Errno 11001] getaddrinfo failed",
+        "googleDns": false,
+        "googleError": "no A/AAAA besides resolver",
+        "nxdomain": false
+      }
+    ],
+    "systemFailGoogleOk": []
+  }
+}
