@@ -4,7 +4,7 @@ export default {
   name: "Honkai Impact 3rd",
   description:
     "Honkai Impact 3rd - custom source (manga.honkaiimpact3.com). Converted from keiyoushi.",
-  version: "1.4.4.1",
+  version: "1.4.4.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

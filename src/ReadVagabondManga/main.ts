@@ -24,6 +24,7 @@ import {
   SearchResultsProviding,
   SourceManga,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 
 const BASE_URL = "https://readbagabondo.com";
 const IMAGE_BASE_URL = "https://pub.moleve.net";
@@ -70,7 +71,7 @@ class ReadVagabondMangaInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

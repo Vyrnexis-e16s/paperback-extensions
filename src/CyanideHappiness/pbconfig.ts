@@ -4,7 +4,7 @@ export default {
   name: "Cyanide & Happiness",
   description:
     "Cyanide & Happiness - webcomic source (explosm.net). Converted from keiyoushi.",
-  version: "1.4.5.2",
+  version: "1.4.5.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

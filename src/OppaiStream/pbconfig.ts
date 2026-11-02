@@ -4,7 +4,7 @@ export default {
   name: "Oppai Stream",
   description:
     "Oppai Stream - custom source (read.oppai.stream). Converted from keiyoushi.",
-  version: "1.4.5.2",
+  version: "1.4.5.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

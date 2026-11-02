@@ -4,7 +4,7 @@ export default {
   name: "MangaK",
   description:
     "MangaK - MangaK theme source (mangak.io). Converted from keiyoushi.",
-  version: "1.4.34.1",
+  version: "1.4.34.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

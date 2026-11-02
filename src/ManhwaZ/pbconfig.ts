@@ -3,7 +3,7 @@ import { ContentRating, ExtensionInfo, SourceIntents } from "@paperback/types";
 export default {
   name: "ManhwaZ",
   description: "ManhwaZ - custom source (manhwaz.cc). Converted from keiyoushi.",
-  version: "1.4.43.1",
+  version: "1.4.43.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

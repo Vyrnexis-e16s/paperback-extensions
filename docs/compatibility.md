@@ -2,12 +2,12 @@
 
 Inspected 2026-11-02.
 
-| App build | Toolchain / types | Extension status |
-| --- | --- | --- |
-| Paperback 0.9 (209) TestFlight | `@paperback/types` and `@paperback/toolchain` **1.0.0-alpha.92** | Primary target. Device tests pending until a hosted registry is installed on a device. |
-| Paperback 0.9 (208) TestFlight | 1.0.0-alpha.92 | Regression target. Same public extension API as 209 in the published types. |
-| Paperback 0.8 App Store | 0.8 toolchain | Unsupported. 0.9 bundles will not install. |
-| Later 0.9 betas | unreleased types | Unverified. A types bump must pass compile + unit + live + device tests before promotion. |
+| App build                      | Toolchain / types                                                | Extension status                                                                          |
+| ------------------------------ | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Paperback 0.9 (209) TestFlight | `@paperback/types` and `@paperback/toolchain` **1.0.0-alpha.92** | Primary target. Device tests pending until a hosted registry is installed on a device.    |
+| Paperback 0.9 (208) TestFlight | 1.0.0-alpha.92                                                   | Regression target. Same public extension API as 209 in the published types.               |
+| Paperback 0.8 App Store        | 0.8 toolchain                                                    | Unsupported. 0.9 bundles will not install.                                                |
+| Later 0.9 betas                | unreleased types                                                 | Unverified. A types bump must pass compile + unit + live + device tests before promotion. |
 
 ## App-managed 208/209 changes (no extension API)
 

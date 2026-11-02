@@ -13,6 +13,7 @@ import {
   type SortingOption,
   type Tag,
 } from "@paperback/types";
+import { isCloudflareChallenge, parseJsonOrCloudflare } from "../common/cloudflare";
 
 import {
   API_URL,
@@ -54,7 +55,7 @@ export class HiveToonsInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",
@@ -78,14 +79,7 @@ export const fetchJSON = async <T>(request: Request): Promise<T> => {
     throw new Error(`Request failed with status ${response.status}: ${request.url}`);
   }
 
-  const data = Application.arrayBufferToUTF8String(buffer);
-
-  try {
-    return JSON.parse(data) as T;
-  } catch (error: unknown) {
-    const reason = error instanceof Error ? error.message : String(error);
-    throw new Error(`Failed to parse JSON from ${request.url}: ${reason}`, { cause: error });
-  }
+  return parseJsonOrCloudflare<T>(response, buffer, DOMAIN);
 };
 
 export const fetchGenres = async (): Promise<Tag[]> => {

@@ -4,7 +4,7 @@ export default {
   name: "Team Shadowi",
   description:
     "Team Shadowi - Next.js JSON/RSC source (team-shadowi.com). Converted from keiyoushi.",
-  version: "1.4.2.1",
+  version: "1.4.2.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

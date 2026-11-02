@@ -4,7 +4,7 @@ export default {
   name: "Hiveworks Comics",
   description:
     "Hiveworks Comics - webcomic aggregator source (hiveworkscomics.com). Converted from keiyoushi.",
-  version: "1.4.12.2",
+  version: "1.4.12.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

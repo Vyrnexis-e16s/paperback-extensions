@@ -3,7 +3,7 @@ import { ContentRating, ExtensionInfo, SourceIntents } from "@paperback/types";
 export default {
   name: "Danke fürs Lesen",
   description: "Danke fürs Lesen - Guya source (danke.moe). Converted from keiyoushi.",
-  version: "1.4.7.2",
+  version: "1.4.7.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

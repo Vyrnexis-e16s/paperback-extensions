@@ -3,7 +3,7 @@ import { ContentRating, ExtensionInfo, SourceIntents } from "@paperback/types";
 export default {
   name: "Manga Mirai",
   description: "Manga Mirai - custom source (mangamirai.com). Converted from keiyoushi.",
-  version: "1.4.1.1",
+  version: "1.4.1.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

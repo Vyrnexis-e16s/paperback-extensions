@@ -27,6 +27,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../../common/cloudflare";
 import { MangaHubSearchForm, MangaHubSearchMeta } from "./forms";
 import {
   getBaseUrlOverride,
@@ -157,8 +158,7 @@ class MangaHubInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    const cfMitigated = response.headers?.["cf-mitigated"];
-    if (cfMitigated === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

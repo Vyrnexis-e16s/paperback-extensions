@@ -4,7 +4,7 @@ export default {
   name: "Greed Scans",
   description:
     "Greed Scans - JSON API source (gojoscans.com). Converted from keiyoushi.",
-  version: "1.4.32.1",
+  version: "1.4.32.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

@@ -3,7 +3,7 @@ import { ContentRating, ExtensionInfo, SourceIntents } from "@paperback/types";
 export default {
   name: "Elf Toon",
   description: "Elf Toon - MangaThemesia source (elftoon.com). Converted from keiyoushi.",
-  version: "1.4.34.4",
+  version: "1.4.34.5",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

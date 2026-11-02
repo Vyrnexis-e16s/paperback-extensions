@@ -3,7 +3,7 @@ import { MangaCatalogExtension } from "../utils/mangacatalog/template";
 
 export const ReadBlackCloverMangaOnline = new MangaCatalogExtension({
   name: "Read Black Clover Manga Online",
-  baseUrl: "https://ww10.readblackclover.com",
+  baseUrl: "https://readblackclover.com",
   contentRating: ContentRating.EVERYONE,
   langCode: "🇬🇧",
   mangaList: [

@@ -27,6 +27,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge, parseJsonOrCloudflare } from "../../common/cloudflare";
 import { URLBuilder } from "../url-builder/base";
 import { IkenSearchForm, IkenSearchMeta } from "./forms";
 import {
@@ -160,8 +161,7 @@ class IkenInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    const cfMitigated = response.headers?.["cf-mitigated"];
-    if (cfMitigated === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",
@@ -760,7 +760,6 @@ export class IkenExtension implements IkenImplementation {
     if (response.status === 404) {
       throw new Error("Content not found");
     }
-    const jsonStr = Application.arrayBufferToUTF8String(data);
-    return JSON.parse(jsonStr) as T;
+    return parseJsonOrCloudflare<T>(response, data, this.baseUrl);
   }
 }

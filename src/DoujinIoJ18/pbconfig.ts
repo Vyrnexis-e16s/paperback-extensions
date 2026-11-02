@@ -4,7 +4,7 @@ export default {
   name: "Doujin.io - J18",
   description:
     "Doujin.io - J18 - JSON API source (doujin.io). Converted from keiyoushi.",
-  version: "1.4.4.1",
+  version: "1.4.4.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

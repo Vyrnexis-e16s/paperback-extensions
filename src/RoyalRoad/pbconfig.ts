@@ -7,7 +7,7 @@ export default {
   name: "RoyalRoad",
   description:
     "Extension that pulls web novels from royalroad.com and renders their chapters as readable pages.",
-  version: "1.0.0-alpha.1",
+  version: "1.0.0-alpha.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

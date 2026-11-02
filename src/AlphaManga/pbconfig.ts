@@ -4,7 +4,7 @@ export default {
   name: "Alpha Manga",
   description:
     "Alpha Manga - JSON API source (alpha-manga.com). Converted from keiyoushi.",
-  version: "1.4.2.1",
+  version: "1.4.2.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

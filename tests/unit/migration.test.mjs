@@ -1,6 +1,7 @@
-import assert from "node:assert/strict"
-import test from "node:test"
-import { matchByExtensionId, refuseNameOnlyMerge } from "../../src/migration/match.ts"
+import assert from "node:assert/strict";
+import test from "node:test";
+
+import { matchByExtensionId, refuseNameOnlyMerge } from "../../src/migration/match.ts";
 
 const entries = [
   {
@@ -15,21 +16,21 @@ const entries = [
     mappingConfidence: "medium",
     reason: "domain-change",
   },
-]
+];
 
 test("matches an unchanged extension id exactly", () => {
-  const result = matchByExtensionId(entries, "ManhuaPlus")
-  assert.equal(result.status, "exact")
+  const result = matchByExtensionId(entries, "ManhuaPlus");
+  assert.equal(result.status, "exact");
   if (result.status === "exact") {
-    assert.equal(result.entry.currentExtensionId, "ManhuaPlus")
+    assert.equal(result.entry.currentExtensionId, "ManhuaPlus");
   }
-})
+});
 
 test("does not merge different titles just because names look similar", () => {
-  assert.equal(refuseNameOnlyMerge("Solo Leveling", "Solo Leveling", false), true)
-  assert.equal(refuseNameOnlyMerge("Solo Leveling", "Solo Leveling", true), false)
-})
+  assert.equal(refuseNameOnlyMerge("Solo Leveling", "Solo Leveling", false), true);
+  assert.equal(refuseNameOnlyMerge("Solo Leveling", "Solo Leveling", true), false);
+});
 
 test("unknown previous ids do not invent a match", () => {
-  assert.equal(matchByExtensionId(entries, "DoesNotExist").status, "none")
-})
+  assert.equal(matchByExtensionId(entries, "DoesNotExist").status, "none");
+});

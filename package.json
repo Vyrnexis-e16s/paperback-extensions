@@ -20,7 +20,7 @@
     "serve": "paperback-cli serve",
     "dev": "paperback-cli serve --watch",
     "logcat": "paperback-cli logcat",
-    "test": "node --experimental-strip-types --test tests/unit/cookies.test.mjs tests/unit/webtoon.test.mjs tests/unit/migration.test.mjs tests/unit/errors.test.mjs",
+    "test": "node --experimental-strip-types --test tests/unit/cookies.test.mjs tests/unit/webtoon.test.mjs tests/unit/migration.test.mjs tests/unit/errors.test.mjs tests/unit/cloudflare.test.mjs",
     "test:extensions": "paperback-cli test --noConsole --output ./bundles/tests.json",
     "validate": "node scripts/validate_registry.mjs",
     "health": "node scripts/source_health.mjs",

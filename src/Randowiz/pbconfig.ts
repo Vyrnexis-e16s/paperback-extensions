@@ -4,7 +4,7 @@ export default {
   name: "Randowiz",
   description:
     "Randowiz - webcomic source (randowis.com). Converted from keiyoushi.",
-  version: "1.4.2.2",
+  version: "1.4.2.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

@@ -4,7 +4,7 @@ export default {
   name: "HentaiSco",
   description:
     "HentaiSco - custom source (hentaisco.cc). Converted from keiyoushi.",
-  version: "1.4.56.1",
+  version: "1.4.56.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

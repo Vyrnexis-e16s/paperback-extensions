@@ -3,6 +3,7 @@
 
 import type { Request, Response } from "@paperback/types";
 import { CloudflareError, PaperbackInterceptor } from "@paperback/types";
+import { isCloudflareChallenge, parseJsonOrCloudflare } from "../../common/cloudflare";
 
 import { DOMAIN } from "../implementations/shared/models";
 
@@ -23,8 +24,7 @@ export class QiScansInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    const cfMitigated = response.headers?.["cf-mitigated"];
-    if (cfMitigated === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",
@@ -45,12 +45,5 @@ export async function fetchJSON<T>(request: Request): Promise<T> {
     throw new Error(`Request failed with status ${response.status}: ${request.url}`);
   }
 
-  const data = Application.arrayBufferToUTF8String(buffer);
-
-  try {
-    return typeof data === "string" ? (JSON.parse(data) as T) : (data as T);
-  } catch (error: unknown) {
-    const reason = error instanceof Error ? error.message : String(error);
-    throw new Error(`Failed to parse JSON from ${request.url}: ${reason}`);
-  }
+  return parseJsonOrCloudflare<T>(response, buffer, request.url);
 }

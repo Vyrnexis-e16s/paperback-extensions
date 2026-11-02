@@ -4,7 +4,7 @@ export default {
   name: "HentaiTnT",
   description:
     "HentaiTnT - custom source (hentaitnt.net). Converted from keiyoushi.",
-  version: "1.4.7.1",
+  version: "1.4.7.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

@@ -4,7 +4,7 @@ export default {
   name: "ComicHubFree",
   description:
     "ComicHubFree - HTML scraper source (comichubfree.com). Converted from keiyoushi.",
-  version: "1.4.3.2",
+  version: "1.4.3.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

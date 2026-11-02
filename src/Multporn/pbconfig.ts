@@ -4,7 +4,7 @@ export default {
   name: "Multporn",
   description:
     "Multporn - HTML scraper source (multporn.net). Converted from keiyoushi.",
-  version: "1.4.6.2",
+  version: "1.4.6.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

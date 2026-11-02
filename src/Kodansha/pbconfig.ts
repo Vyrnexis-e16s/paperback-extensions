@@ -4,7 +4,7 @@ export default {
   name: "Kodansha",
   description:
     "Kodansha - JSON API source (kodansha.us). Converted from keiyoushi.",
-  version: "1.4.1.1",
+  version: "1.4.1.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

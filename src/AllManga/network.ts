@@ -8,6 +8,7 @@ import {
   type Request,
   type Response,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 
 import {
   API_URL,
@@ -55,7 +56,7 @@ export class AllMangaInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

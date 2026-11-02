@@ -26,6 +26,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 import { ScansGGSearchForm, ScansGGSearchMeta, TAG_OPTIONS } from "./forms";
 
 const BASE_URL = "https://scans.gg";
@@ -106,7 +107,7 @@ class ScansGGInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

@@ -4,7 +4,7 @@ export default {
   name: "SilentQuill",
   description:
     "SilentQuill - custom source (silentquill.net). Converted from keiyoushi.",
-  version: "1.4.35.1",
+  version: "1.4.35.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

@@ -25,6 +25,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 
 const BASE_URL = "https://app.ninekon.com";
 const API_URL = "https://api.ninekon.com/1.0";
@@ -131,7 +132,7 @@ class NinekonInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

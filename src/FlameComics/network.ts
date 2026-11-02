@@ -8,6 +8,7 @@ import {
   type Request,
   type Response,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 
 import { CDN, DOMAIN, FALLBACK_BUILD_ID } from "./models";
 
@@ -28,7 +29,7 @@ export class FlameInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: DOMAIN,
         method: "GET",

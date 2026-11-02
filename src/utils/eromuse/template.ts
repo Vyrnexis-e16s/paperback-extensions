@@ -27,6 +27,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../../common/cloudflare";
 import * as cheerio from "cheerio";
 import { CheerioAPI, Cheerio } from "cheerio";
 import type { AnyNode } from "domhandler";
@@ -117,8 +118,7 @@ class EroMuseInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    const cfMitigated = response.headers?.["cf-mitigated"];
-    if (cfMitigated === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

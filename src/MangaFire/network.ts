@@ -7,6 +7,7 @@ import {
   type Request,
   type Response,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 
 import { getBrokenCdnPrefixes } from "./forms/settings";
 import { CDN_HOST_REGEX, CDN_PREFIXES, DOMAIN } from "./models";
@@ -41,8 +42,7 @@ export class MangaFireInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    const cfMitigated = response.headers?.["cf-mitigated"];
-    if (cfMitigated === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: `${DOMAIN}/`,
         method: request.method ?? "GET",

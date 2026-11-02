@@ -25,6 +25,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 
 const BASE_URL = "https://emaqi.com";
 const API_URL = "https://api.emaqi.com/graphql";
@@ -234,7 +235,7 @@ class EmaqiInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

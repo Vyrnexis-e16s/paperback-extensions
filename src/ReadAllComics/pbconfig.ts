@@ -4,7 +4,7 @@ export default {
   name: "ReadAllComics",
   description:
     "ReadAllComics - custom source (readallcomics.com). Converted from keiyoushi.",
-  version: "1.4.8.1",
+  version: "1.4.8.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

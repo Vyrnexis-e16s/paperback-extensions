@@ -4,7 +4,7 @@ export default {
   name: "Yorai",
   description:
     "Yorai - Next.js manga source (yorai.io). Converted from keiyoushi.",
-  version: "1.4.2.1",
+  version: "1.4.2.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

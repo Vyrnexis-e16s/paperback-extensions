@@ -4,7 +4,7 @@ export default {
   name: "Coolmic",
   description:
     "Coolmic - JSON API manga source (coolmic.me). Converted from keiyoushi.",
-  version: "1.4.4.2",
+  version: "1.4.4.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

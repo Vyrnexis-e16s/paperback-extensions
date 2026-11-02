@@ -4,7 +4,7 @@ export default {
   name: "J-Novel",
   description:
     "J-Novel - manga source (j-novel.club). Converted from keiyoushi.",
-  version: "1.4.4.2",
+  version: "1.4.4.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

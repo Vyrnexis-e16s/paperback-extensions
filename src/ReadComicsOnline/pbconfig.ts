@@ -3,7 +3,7 @@ import { ContentRating, ExtensionInfo, SourceIntents } from "@paperback/types";
 export default {
   name: "Read Comics Online",
   description: "Read Comics Online - MMRCMS source (readcomicsonline.ru). Converted from keiyoushi.",
-  version: "1.4.15.2",
+  version: "1.4.15.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

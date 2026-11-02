@@ -4,7 +4,7 @@ export default {
   name: "Manhwalike",
   description:
     "Manhwalike - custom source (manhwalike.com). Converted from keiyoushi.",
-  version: "1.4.3.2",
+  version: "1.4.3.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

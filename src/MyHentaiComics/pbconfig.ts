@@ -4,7 +4,7 @@ export default {
   name: "MyHentaiComics",
   description:
     "MyHentaiComics - gallery/comic source (myhentaicomics.com). Converted from keiyoushi.",
-  version: "1.4.4.2",
+  version: "1.4.4.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

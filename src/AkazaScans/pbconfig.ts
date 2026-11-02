@@ -4,7 +4,7 @@ export default {
   name: "Akaza Scans",
   description:
     "Akaza Scans - MangaThemesia source (akazascans.org). Converted from keiyoushi.",
-  version: "1.4.32.2",
+  version: "1.4.32.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

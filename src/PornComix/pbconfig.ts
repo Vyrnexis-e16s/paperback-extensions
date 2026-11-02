@@ -4,7 +4,7 @@ export default {
   name: "PornComix",
   description:
     "PornComix - HTML scraper source (bestporncomix.com). Converted from keiyoushi.",
-  version: "1.4.49.2",
+  version: "1.4.49.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

@@ -29,6 +29,7 @@ import {
   TagSection,
   ToggleRow,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 import * as cheerio from "cheerio";
 import { Cheerio, CheerioAPI } from "cheerio";
 import type { AnyNode } from "domhandler";
@@ -127,7 +128,7 @@ class MangaDramaInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

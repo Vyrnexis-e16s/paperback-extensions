@@ -4,7 +4,7 @@ export default {
   name: "I Roved Out",
   description:
     "I Roved Out - single webcomic source (irovedout.com). Converted from keiyoushi.",
-  version: "1.4.5.2",
+  version: "1.4.5.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

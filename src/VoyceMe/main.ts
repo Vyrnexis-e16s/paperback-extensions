@@ -25,6 +25,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 
 const BASE_URL = "https://www.voyce.me";
 const GRAPHQL_URL = "https://graphql.voyce.me/v1/graphql";
@@ -136,7 +137,7 @@ class VoyceMeInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

@@ -4,7 +4,7 @@ export default {
   name: "XOXO Comics",
   description:
     "XOXO Comics - HTML scraper source (xoxocomic.com). Converted from keiyoushi.",
-  version: "1.4.14.1",
+  version: "1.4.14.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

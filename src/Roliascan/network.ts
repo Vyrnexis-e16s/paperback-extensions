@@ -7,6 +7,7 @@ import {
   type Request,
   type Response,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 
 import { DOMAIN } from "./models";
 
@@ -28,8 +29,7 @@ export class RoliascanInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    const cfMitigated = response.headers?.["cf-mitigated"];
-    if (cfMitigated === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: `${DOMAIN}/`,
         method: request.method ?? "GET",

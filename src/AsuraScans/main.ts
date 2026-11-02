@@ -28,6 +28,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge, parseJsonOrCloudflare } from "../common/cloudflare";
 import * as cheerio from "cheerio";
 import { CheerioAPI } from "cheerio";
 import * as htmlparser2 from "htmlparser2";
@@ -117,7 +118,7 @@ class AsuraScansInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",
@@ -483,7 +484,7 @@ class AsuraScansExtension implements AsuraScansImplementation {
       method: "GET",
     });
     if (response.status === 404) throw new Error("Content not found");
-    return JSON.parse(Application.arrayBufferToUTF8String(data)) as T;
+    return parseJsonOrCloudflare<T>(response, data, BASE_URL);
   }
 
   private async fetchCheerio(url: string): Promise<CheerioAPI> {

@@ -26,6 +26,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge, parseJsonOrCloudflare } from "../common/cloudflare";
 import { AlandalSearchForm, AlandalSearchMeta } from "./forms";
 
 const BASE_URL = "https://alandal.com";
@@ -93,7 +94,7 @@ class AlandalInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",
@@ -310,7 +311,7 @@ class AlandalExtension implements AlandalImplementation {
   private async fetchJson<T>(request: Request): Promise<T> {
     const [response, data] = await Application.scheduleRequest(request);
     if (response.status === 404) throw new Error("Content not found");
-    return JSON.parse(Application.arrayBufferToUTF8String(data)) as T;
+    return parseJsonOrCloudflare<T>(response, data, BASE_URL);
   }
 
   private stripHtml(html: string): string {

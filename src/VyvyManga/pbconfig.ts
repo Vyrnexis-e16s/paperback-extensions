@@ -4,7 +4,7 @@ export default {
   name: "VyvyManga",
   description:
     "VyvyManga - custom source (vymanga.net). Converted from keiyoushi.",
-  version: "1.4.43.1",
+  version: "1.4.43.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

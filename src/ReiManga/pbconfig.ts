@@ -4,7 +4,7 @@ export default {
   name: "ReiManga",
   description:
     "ReiManga - JSON-API + Next.js RSC source (reimanga.com). Converted from keiyoushi.",
-  version: "1.4.6.1",
+  version: "1.4.6.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

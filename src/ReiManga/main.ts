@@ -25,6 +25,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 
 const DOMAIN = "reimanga.net";
 const BASE_URL = `https://${DOMAIN}`;
@@ -96,7 +97,7 @@ class ReiMangaInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

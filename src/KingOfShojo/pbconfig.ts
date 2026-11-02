@@ -3,7 +3,7 @@ import { ContentRating, ExtensionInfo, SourceIntents } from "@paperback/types";
 export default {
   name: "King of Shojo",
   description: "King of Shojo - MangaThemesia source (kingofshojo.com). Converted from keiyoushi.",
-  version: "1.4.32.3",
+  version: "1.4.32.4",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.MATURE,

@@ -4,7 +4,7 @@ export default {
   name: "The Property of Hate",
   description:
     "The Property of Hate - webcomic source (jolleycomics.com). Converted from keiyoushi.",
-  version: "1.4.6.1",
+  version: "1.4.6.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

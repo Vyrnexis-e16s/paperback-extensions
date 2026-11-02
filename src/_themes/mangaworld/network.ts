@@ -2,6 +2,7 @@
 /* Copyright © 2026 Inkdex */
 
 import {
+  CloudflareError,
   PaperbackInterceptor,
   URL,
   type Request,
@@ -9,6 +10,7 @@ import {
   type SearchQuery,
   type SortingOption,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../../common/cloudflare";
 
 import { filter, MangaWorldGeneric } from "./main";
 import type { SearchMetadata } from "./models";
@@ -141,8 +143,12 @@ export class MainInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    void request;
-    void response;
+    if (isCloudflareChallenge(response, data)) {
+      throw new CloudflareError({
+        url: request.url,
+        method: request.method ?? "GET",
+      });
+    }
 
     return data;
   }

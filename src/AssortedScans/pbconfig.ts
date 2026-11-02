@@ -3,7 +3,7 @@ import { ContentRating, ExtensionInfo, SourceIntents } from "@paperback/types";
 export default {
   name: "Assorted Scans",
   description: "Assorted Scans - MangAdventure source (assortedscans.com). Converted from keiyoushi.",
-  version: "1.4.18.2",
+  version: "1.4.18.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

@@ -4,7 +4,7 @@ export default {
   name: "Vortex Scans",
   description:
     "Vortex Scans - JSON API source (vortexscans.org). Converted from keiyoushi.",
-  version: "1.4.89.1",
+  version: "1.4.89.2",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

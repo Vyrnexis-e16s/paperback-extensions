@@ -14,18 +14,20 @@
  * Do not invent additional MangaInfo properties.
  */
 
-export type TitleContentType = "comic" | "novel"
+export type TitleContentType = "comic" | "novel";
 
-export type WebtoonTag = { id: string; title: string }
+export type WebtoonTag = { id: string; title: string };
 
-export function contentTypeForTitle(kind: "paginated-manga" | "webtoon" | "novel"): TitleContentType {
-  return kind === "novel" ? "novel" : "comic"
+export function contentTypeForTitle(
+  kind: "paginated-manga" | "webtoon" | "novel",
+): TitleContentType {
+  return kind === "novel" ? "novel" : "comic";
 }
 
 export function webtoonGenreTag(): WebtoonTag {
-  return { id: "webtoon", title: "Webtoon" }
+  return { id: "webtoon", title: "Webtoon" };
 }
 
 export function shouldMarkWebtoon(kind: "paginated-manga" | "webtoon" | "novel"): boolean {
-  return kind === "webtoon"
+  return kind === "webtoon";
 }

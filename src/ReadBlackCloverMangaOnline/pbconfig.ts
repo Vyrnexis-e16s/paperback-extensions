@@ -2,8 +2,8 @@ import { ContentRating, ExtensionInfo, SourceIntents } from "@paperback/types";
 
 export default {
   name: "Read Black Clover Manga Online",
-  description: "Read Black Clover Manga Online - MangaCatalog source (ww10.readblackclover.com). Converted from keiyoushi.",
-  version: "1.4.8.4",
+  description: "Read Black Clover Manga Online - MangaCatalog source (readblackclover.com). Converted from keiyoushi.",
+  version: "1.4.8.6",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,

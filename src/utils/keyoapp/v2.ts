@@ -10,6 +10,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { parseJsonOrCloudflare } from "../../common/cloudflare";
 import * as cheerio from "cheerio";
 import { CheerioAPI } from "cheerio";
 import * as htmlparser2 from "htmlparser2";
@@ -255,7 +256,7 @@ export class KeyoappV2Extension extends KeyoappExtension {
     if (response.status < 200 || response.status >= 300) {
       throw new Error(`HTTP ${response.status}`);
     }
-    return JSON.parse(Application.arrayBufferToUTF8String(data)) as T;
+    return parseJsonOrCloudflare<T>(response, data, url);
   }
 }
 

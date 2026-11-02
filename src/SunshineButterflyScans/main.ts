@@ -25,6 +25,7 @@ import {
   SourceManga,
   TagSection,
 } from "@paperback/types";
+import { isCloudflareChallenge } from "../common/cloudflare";
 
 const BASE_URL = "https://wings.sbs";
 const CDN_URL = `${BASE_URL}/images/projcoverjpeg/`;
@@ -140,7 +141,7 @@ class SunshineButterflyScansInterceptor extends PaperbackInterceptor {
     response: Response,
     data: ArrayBuffer,
   ): Promise<ArrayBuffer> {
-    if (response.headers?.["cf-mitigated"] === "challenge") {
+    if (isCloudflareChallenge(response, data)) {
       throw new CloudflareError({
         url: request.url,
         method: request.method ?? "GET",

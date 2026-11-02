@@ -4,7 +4,7 @@ export default {
   name: "Grrl Power Comic",
   description:
     "Grrl Power Comic - webcomic source (grrlpowercomic.com). Converted from keiyoushi.",
-  version: "1.4.5.2",
+  version: "1.4.5.3",
   icon: "icon.png",
   language: "en",
   contentRating: ContentRating.EVERYONE,
