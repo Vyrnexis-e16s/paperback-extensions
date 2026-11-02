@@ -7,3 +7,7 @@
 .pbx/
 tsconfig.tsbuildinfo
 node_modules/.cache/
+
+# Generated health output and one-off DNS/registry dumps.
+# Keep reports/sources/. CI uploads health.json as an artifact.
+/reports/testing/
